@@ -4,6 +4,10 @@ Template.Basket.helpers
     if basket.count() is 0 then false else basket
   sum: (price, count) ->
     (price * count).toFixed(2)
+  overallSum: ->
+    _.reduce(Basket.find().fetch(), (memo, value) ->
+      memo + (value.price * value.count)
+    , 0).toFixed(2)
 
 Template.Basket.events
   'click .remove-from-basket': (event, tmpl) ->

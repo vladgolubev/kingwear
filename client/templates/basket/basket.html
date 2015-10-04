@@ -29,7 +29,10 @@
         {{/each}}
         </tbody>
       </table>
-      <button class="btn btn-info pull-right">Оформити замовлення</button>
+      <div class="btn-group pull-right">
+        <button class="btn btn-default disabled">{{overallSum}} грн</button>
+        <button class="btn btn-info">Оформити замовлення</button>
+      </div>
     {{else}}
       <div class="well text-center">
         На жаль, Ваш кошик порожній. <a href="/">Перейти до товарів</a>
