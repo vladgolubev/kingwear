@@ -22,9 +22,11 @@
             <td>{{name}}</td>
             <td>
               <select class="size-select">
-                {{#each sizes}}
-                  <option value="{{this}}">{{this}}</option>
-                {{/each}}
+                {{#let size=size}}
+                  {{#each sizes}}
+                    <option value="{{this}}" {{isSelected this size}}>{{this}}</option>
+                  {{/each}}
+                {{/let}}
               </select>
             </td>
             <td>{{price}}</td>
