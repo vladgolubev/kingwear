@@ -6,7 +6,7 @@ Template.ItemPage.onCreated ->
     item._id._str is selectedItem
 
 Template.ItemPage.helpers
-  info: ->
+  item: ->
     Template.instance().item.get()
   photos: ->
     links = Template.instance().item.get().photos

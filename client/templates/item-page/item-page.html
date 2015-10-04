@@ -9,11 +9,21 @@
       {{/each}}
     </div>
     <div class="row item-heading-wrapper">
-      <h1 class="text-center item-heading">{{info.name}}</h1>
+      <h1 class="item-heading">
+        {{item.name}}
+        <span class="pull-right">
+          <div class="price-wrapper">
+            <div class="btn-group">
+              <div class="btn btn-info">Купити</div>
+              <div class="btn btn-primary disabled">{{item.price}} грн</div>
+            </div>
+          </div>
+        </span>
+      </h1>
     </div>
     <div class="row">
       <blockquote>
-        {{info.description}}
+        {{item.description}}
       </blockquote>
     </div>
     <div class="row">
@@ -21,7 +31,7 @@
         <div class="well">
           <h4>Функціонал</h4>
           <ul>
-            {{#each info.features}}
+            {{#each item.features}}
               <li>{{this}}</li>
             {{/each}}
           </ul>
@@ -31,7 +41,7 @@
         <div class="well">
           <h4>Догляд</h4>
           <ul>
-            {{#each info.care}}
+            {{#each item.care}}
               <li>{{this}}</li>
             {{/each}}
           </ul>
