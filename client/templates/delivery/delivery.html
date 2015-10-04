@@ -1,0 +1,54 @@
+<template name="Delivery">
+  <h2>Для завершення замовлення введіть адресу доставки</h2>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="panel panel-primary item-square">
+        <div class="panel-heading">
+          <h3 class="panel-title">Дані отримувача</h3>
+        </div>
+        <div class="panel-body">
+          <input type="text" id="name" class="form-control" placeholder="Прізвище Ім'я По-батькові"/>
+          <br/>
+          <input type="text" id="city" class="form-control" placeholder="Населений пункт"/>
+          <br/>
+          <div class="input-group">
+            <span class="input-group-addon">№</span>
+            <input type="text" id="nova-poshta" class="form-control" placeholder="Відділення Нової Пошти"/>
+          </div>
+          <br/>
+          <div class="input-group">
+            <span class="input-group-addon">+38</span>
+            <input type="text" id="number" class="form-control" placeholder="Мобільний телефон"/>
+          </div>
+          <br/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <div class="panel panel-primary item-square">
+        <div class="panel-heading">
+          <h3 class="panel-title">Підтвердження замовлення</h3>
+        </div>
+        <div class="panel-body">
+          <p class="well">
+            <strong>Оплата </strong> проводиться при отриманні замовлення на пошті. <br/>
+            <strong>Термін доставки</strong>: 1-2 дні
+          </p>
+          <ul>
+            {{#each items}}
+              <li>{{count}} шт. - {{name}} ({{size}})</li>
+            {{/each}}
+          </ul>
+          <div class="btn-group pull-right">
+            <button class="btn btn-default disabled">{{overallSum}} грн</button>
+            <button class="btn btn-info" id="confirm-order">Підтвердити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+
+    </div>
+  </div>
+</template>

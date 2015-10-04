@@ -20,8 +20,10 @@ Template.Basket.events
         size: newItemSize
       }
     }
+
   'click .remove-from-basket': ->
     Basket.remove {_id: new Mongo.Collection.ObjectID @_id._str}
+
   'keyup .item-count-input': (event, tmpl) ->
     newItemCount = tmpl.$(event.target).val()
     Basket.update {_id: new Mongo.Collection.ObjectID @_id._str}, {
@@ -29,3 +31,6 @@ Template.Basket.events
         count: newItemCount
       }
     }
+
+  'click #proceed-order': ->
+    Router.go '/delivery'

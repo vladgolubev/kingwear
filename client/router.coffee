@@ -16,3 +16,6 @@ Router.route '/item/:item',
 
 Router.route '/basket',
   template: 'Basket'
+
+Router.route '/delivery',
+  template: 'Delivery'
