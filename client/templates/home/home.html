@@ -1,3 +1,5 @@
 <template name="Home">
-  {{items}}
+    {{#each items}}
+      {{> ItemSquare this}}
+    {{/each}}
 </template>

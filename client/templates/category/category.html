@@ -1,7 +1,5 @@
 <template name="Category">
-  <ul>
-    {{#each items}}
-      <li>{{name}}</li>
-    {{/each}}
-  </ul>
+  {{#each items}}
+    {{> ItemSquare this}}
+  {{/each}}
 </template>
