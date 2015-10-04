@@ -24,3 +24,5 @@ ejson
 bootswatch:flatly
 reactive-var
 fortawesome:fontawesome
+meteorhacks:fast-render
+accounts-password
