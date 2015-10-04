@@ -8,19 +8,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">KING STREETWEAR</a>
+        <a class="navbar-brand" href="/">KING STREETWEAR</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Останні</a></li>
-          <li><a href="#">Анораки</a></li>
-          <li><a href="#">Кофти, світшоти</a></li>
-          <li><a href="#">Парки</a></li>
-          <li><a href="#">Сумки</a></li>
-          <li><a href="#">Футболки</a></li>
-          <li><a href="#">Штани і шорти</a></li>
-
+          {{#each categories}}
+            <li><a href="/category/{{this}}">{{this}}</a></li>
+          {{/each}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Кошик</a></li>
