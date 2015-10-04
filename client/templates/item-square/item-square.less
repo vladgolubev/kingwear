@@ -1,12 +1,33 @@
+@import "../../mixins.import.less";
+
 .item-square {
 
-  .panel-title {
-    font-weight: bold;
-    text-align: center;
+  .panel-heading {
+    .transition(opacity, .2s);
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    a {
+      color: white;
+
+      .panel-title {
+        cursor: pointer;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
   }
 
   .main-image-wrapper {
+    cursor: pointer;
     text-align: center;
+    .transition(opacity, .2s);
+
+    &:hover {
+      opacity: 0.75;
+    }
 
     .main-image {
       max-width: 100%;
