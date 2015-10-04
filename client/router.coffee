@@ -13,3 +13,6 @@ Router.route '/category/:category',
 
 Router.route '/item/:item',
   template: 'ItemPage'
+
+Router.route '/basket',
+  template: 'Basket'
