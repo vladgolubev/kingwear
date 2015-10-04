@@ -10,3 +10,6 @@ Router.route '/',
 
 Router.route '/category/:category',
   template: 'Category'
+
+Router.route '/item/:item',
+  template: 'ItemPage'

@@ -22,3 +22,4 @@ less
 twbs:bootstrap
 ejson
 bootswatch:flatly
+reactive-var
