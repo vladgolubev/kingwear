@@ -11,12 +11,10 @@ Template.Basket.helpers
 
 Template.Basket.events
   'click .remove-from-basket': (event, tmpl) ->
-    itemToRemove = tmpl.$(event.target).data 'id'
-    Basket.remove {_id: new Mongo.Collection.ObjectID itemToRemove}
+    Basket.remove {_id: new Mongo.Collection.ObjectID @_id._str}
   'keyup .item-count-input': (event, tmpl) ->
-    itemToUpdate = tmpl.$(event.target).data 'id'
     newItemCount = tmpl.$(event.target).val()
-    Basket.update {_id: new Mongo.Collection.ObjectID itemToUpdate}, {
+    Basket.update {_id: new Mongo.Collection.ObjectID @_id._str}, {
       $set: {
         count: newItemCount
       }
