@@ -5,5 +5,5 @@ Template.NavBar.helpers
 
   basketCount: ->
     _.reduce Basket.find().fetch(), (memo, value) ->
-      memo + value.count
+      memo + parseInt(value.count)
     , 0
