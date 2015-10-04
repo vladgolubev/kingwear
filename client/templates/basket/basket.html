@@ -1,15 +1,39 @@
 <template name="Basket">
-  <h2>Кошик</h2>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>-</th>
-      <th>Найменування</th>
-      <th>Ціна за шт.</th>
-      <th>шт.</th>
-      <th>Сума</th>
-      <th>Видалити</th>
-    </tr>
-    </thead>
-  </table>
+  <div id="basket">
+    {{#if items}}
+
+      <h2>Кошик</h2>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th><i class="fa fa-image"></i></th>
+          <th>Найменування</th>
+          <th>Ціна за шт.</th>
+          <th>Шт.</th>
+          <th>Сума</th>
+          <th>Видалити</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each items}}
+          <tr>
+            <td><img src="{{mainPhoto}}" class="tumbnail"/></td>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      <button class="btn btn-info pull-right">Оформити замовлення</button>
+    {{else}}
+      <div class="well text-center">
+        На жаль, Ваш кошик порожній. <a href="/">Перейти до товарів</a>
+      </div>
+    {{/if}}
+  </div>
 </template>
