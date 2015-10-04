@@ -4,4 +4,6 @@ Template.NavBar.helpers
     _.pluck items, 'category'
 
   basketCount: ->
-    Basket.find().count()
+    _.reduce Basket.find().fetch(), (memo, value) ->
+      memo + value.count
+    , 0
