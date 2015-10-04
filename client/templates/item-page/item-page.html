@@ -4,12 +4,33 @@
       {{#each photos}}
         <img src="{{link}}" class="photo
         {{#unless first}}hidden-xs{{/unless}}
-        {{#unless medium}}hidden-sm{{/unless}}
+          {{#unless medium}}hidden-sm{{/unless}}
         "/>
       {{/each}}
     </div>
     <div class="row item-heading-wrapper">
-      <h3 class="text-center item-heading">{{info.name}}</h3>
+      <h1 class="text-center item-heading">{{info.name}}</h1>
+    </div>
+    <div class="row">
+      <blockquote>
+        {{info.description}}
+      </blockquote>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="list-group">
+          {{#each info.features}}
+            <div class="list-group-item">
+              <p class="list-group-item-text">
+                {{this}}
+              </p>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+
+      </div>
     </div>
   </div>
 </template>

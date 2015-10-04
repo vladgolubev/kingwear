@@ -10,7 +10,7 @@ Template.ItemPage.helpers
     Template.instance().item.get()
   photos: ->
     links = Template.instance().item.get().photos
-    photos = _.map links, (link, index) ->
+    _.map links, (link, index) ->
       link: link
       first: index is 0
       medium: index < 3
