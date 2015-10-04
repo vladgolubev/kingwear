@@ -19,3 +19,6 @@ Router.route '/basket',
 
 Router.route '/delivery',
   template: 'Delivery'
+
+Router.route '/success',
+  template: 'Success'

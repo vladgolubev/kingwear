@@ -1,0 +1,20 @@
+<template name="Success">
+  <div id="success">
+    <h1>Дякуємо за замовлення!</h1>
+    <h4>Слідкуйте за нашою спільнотою ВК</h4>
+
+    <!-- VK Widget -->
+
+    <div id="vk_groups"></div>
+    <script type="text/javascript">
+      VK.Widgets.Group("vk_groups", {
+        mode: 0,
+        width: "400",
+        height: "400",
+        color1: 'FFFFFF',
+        color2: '2B587A',
+        color3: '5B7FA6'
+      }, 88631344);
+    </script>
+  </div>
+</template>
