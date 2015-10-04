@@ -18,18 +18,24 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-xs-12">
-        <div class="list-group">
-          {{#each info.features}}
-            <div class="list-group-item">
-              <p class="list-group-item-text">
-                {{this}}
-              </p>
-            </div>
-          {{/each}}
+        <div class="well">
+          <h4>Функціонал</h4>
+          <ul>
+            {{#each info.features}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
-
+        <div class="well">
+          <h4>Догляд</h4>
+          <ul>
+            {{#each info.care}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
