@@ -12,12 +12,7 @@
       <h1 class="item-heading">
         {{item.name}}
         <span class="pull-right">
-          <div class="price-wrapper">
-            <div class="btn-group">
-              <div class="btn btn-info">Купити</div>
-              <div class="btn btn-primary disabled">{{item.price}} грн</div>
-            </div>
-          </div>
+          {{> BuyButton item}}
         </span>
       </h1>
     </div>
