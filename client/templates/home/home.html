@@ -1,16 +1,7 @@
 <template name="Home">
   <div id="home">
     <div class="row">
-      <div class="fotorama"
-           data-width="100%"
-           data-ratio="4/1"
-           data-fit="cover"
-           data-autoplay="3000"
-           data-stopautoplayontouch="false"
-          >
-        <img src="https://king-wear.com.ua/store/image/cache/catalog/DSC_0275-1140x660w.jpg">
-        <img src="https://king-wear.com.ua/store/image/cache/catalog/V3hLw7beqnA-1140x660w.jpg">
-      </div>
+      {{> PhotoCarousel}}
     </div>
     <div class="row">
       {{#each items}}
