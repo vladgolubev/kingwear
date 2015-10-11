@@ -1,0 +1,18 @@
+<template name="InstaFeed">
+  <div class="insta-feed">
+    <div class="panel panel-primary">
+      <div class="panel-heading insta-heading">
+        <a href="https://instagram.com/king_streetwear_ua/" class="insta-heading-link">
+          <h2 class="panel-title">#kingstreetwear в &nbsp;&nbsp; <i class="fa fa-instagram"></i> &nbsp; Instagram</h2>
+        </a>
+      </div>
+      <div class="panel-body images-wrapper">
+        {{#each feed}}
+          <a href="{{url}}" target="_blank">
+            <img src="{{directLink}}" class="main-image"/>
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

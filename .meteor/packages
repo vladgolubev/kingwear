@@ -26,3 +26,7 @@ reactive-var
 fortawesome:fontawesome
 meteorhacks:fast-render
 accounts-password
+krstffr:instagram-fetcher
+check
+meteorhacks:async
+simple:reactive-method
