@@ -24,9 +24,10 @@ ejson
 bootswatch:flatly
 reactive-var
 fortawesome:fontawesome
-meteorhacks:fast-render
 accounts-password
 krstffr:instagram-fetcher
 check
 meteorhacks:async
 simple:reactive-method
+yogiben:admin
+aldeed:collection2
