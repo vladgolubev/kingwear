@@ -9,6 +9,9 @@ Router.configure
 Router.route '/',
   template: 'Home'
 
+Router.route '/login',
+  template: 'Auth'
+
 Router.route '/category/:category',
   template: 'Category'
 
