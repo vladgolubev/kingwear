@@ -2,10 +2,12 @@
   <div id="item-page">
     <div class="row photos-row">
       {{#each photos}}
-        <img src="{{link}}" class="photo
-        {{#unless first}}hidden-xs{{/unless}}
+        <a href="{{link}}">
+          <img src="{{link}}" class="photo
+          {{#unless first}}hidden-xs{{/unless}}
           {{#unless medium}}hidden-sm{{/unless}}
-        "/>
+          "/>
+        </a>
       {{/each}}
     </div>
     <div class="row item-heading-wrapper">

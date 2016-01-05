@@ -5,6 +5,9 @@ Template.ItemPage.onCreated ->
   @item.set _.find items, (item) ->
     item._id._str is selectedItem
 
+Template.ItemPage.onRendered ->
+  @$('.row.photos-row a').fluidbox()
+
 Template.ItemPage.helpers
   item: ->
     Template.instance().item.get()
