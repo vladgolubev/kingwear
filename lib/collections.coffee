@@ -48,5 +48,5 @@ Schemas.Orders = new SimpleSchema({
     }]
 })
 
-Items.attachSchema Schemas.Items
-Orders.attachSchema Schemas.Orders
+@Items.attachSchema Schemas.Items
+@Orders.attachSchema Schemas.Orders
